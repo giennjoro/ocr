@@ -6,10 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/ocr" method="POST" enctype="multipart/form-data">
-        @csrf
-        <input type="file" name="image" required>
-        <input type="submit" value="Extract text!"><br>
-    </form>
+    {{$text}}
 </body>
 </html>
