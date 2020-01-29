@@ -20,7 +20,8 @@ Route::get('/welcome', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/ocr', 'OcrController@ocr');
+Route::post('/ocr', 'OcrController@ocr');
+Route::get('/', 'OcrController@landing');
 
 Route::group(['middleware' => 'auth', 'middlewareGroups' => 'web'], function(){
 
